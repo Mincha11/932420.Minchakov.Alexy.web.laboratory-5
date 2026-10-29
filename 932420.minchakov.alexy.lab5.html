@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Геймер и разработчик игр — лабораторная № 4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="page-title">Алексей Минчаков</h1>
+        <p>Группа 932420</p>
+
+        <nav aria-label="Основная навигация">
+            <a href="#skills">Навыки</a>
+            <a href="#projects">Проекты</a>
+            <a href="#genres">Жанры игр</a>
+            <a href="#favorite-games">Любимые игры</a>
+            <a href="#dashboard">Статистика</a>
+            <a href="#technologies">Технологии</a>
+            <a href="#feedback">Обратная связь</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="theme-toggle" type="button">
+                Переключить тему
+            </button>
+            <button id="title-toggle" type="button">
+                Изменить заголовок
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="skills">
+            <h2>Навыки</h2>
+            <ul>
+                <li>Логическое мышление и программирование</li>
+                <li>Работа с игровыми движками</li>
+                <li>Знание игровых механик</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Проекты и игры, которые меня вдохновляют</h2>
+
+            <ol>
+                <li>Grand Theft Auto V — Rockstar Games</li>
+                <li>Red Dead Redemption 2 — Rockstar Games</li>
+                <li>Cyberpunk 2077 — CD Projekt RED</li>
+                <li>Fortnite — Epic Games</li>
+            </ol>
+
+            <div class="projects-images">
+                <article class="project-card">
+                    <img src="images/rockstar.jpg"
+                         alt="Игры Rockstar Games"
+                         width="250"
+                         height="150">
+                    <h3>Rockstar Games</h3>
+                    <p>Grand Theft Auto и Red Dead Redemption</p>
+                </article>
+
+                <article class="project-card">
+                    <img src="images/cdred.png"
+                         alt="Cyberpunk 2077"
+                         width="250"
+                         height="150">
+                    <h3>CD Projekt RED</h3>
+                    <p>Cyberpunk 2077</p>
+                </article>
+
+                <article class="project-card">
+                    <img src="images/epic.jpg"
+                         alt="Fortnite"
+                         width="250"
+                         height="150">
+                    <h3>Epic Games</h3>
+                    <p>Fortnite и Unreal Engine</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="genres">
+            <h2>Любимые жанры игр</h2>
+
+            <div class="genre-container">
+                <article class="genre-card">
+                    <div class="genre-icon">🎮</div>
+                    <h3>RPG</h3>
+                    <p>
+                        Ролевые игры с развитием персонажа,
+                        исследованием мира и выполнением заданий.
+                    </p>
+                </article>
+
+                <article class="genre-card">
+                    <div class="genre-icon">🔫</div>
+                    <h3>Шутеры</h3>
+                    <p>
+                        Динамичные игры с перестрелками
+                        и тактическими сражениями.
+                    </p>
+                </article>
+
+                <article class="genre-card">
+                    <div class="genre-icon">🏎️</div>
+                    <h3>Гонки</h3>
+                    <p>
+                        Игры про скорость и соревнования,
+                        где нужно прийти первым.
+                    </p>
+                </article>
+
+                <article class="genre-card">
+                    <div class="genre-icon">🌍</div>
+                    <h3>Открытый мир</h3>
+                    <p>
+                        Большие игровые миры, которые
+                        можно свободно исследовать.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="favorite-games">
+            <h2>Список любимых игр с рейтингом</h2>
+
+            <p>
+                Добавляй игры, указывай жанр и оценивай
+                их по шкале от 1 до 5.
+            </p>
+
+            <div class="game-controls">
+                <button id="add-game" type="button">
+                    Добавить игру
+                </button>
+
+                <button id="delete-last-game"
+                        class="secondary-button"
+                        type="button">
+                    Удалить последнюю
+                </button>
+
+                <button id="toggle-games"
+                        class="secondary-button"
+                        type="button">
+                    Скрыть список
+                </button>
+            </div>
+
+            <p id="games-message"
+               class="message"
+               role="status"
+               aria-live="polite"></p>
+
+            <div id="games-list" class="games-list"></div>
+        </section>
+
+        <section id="dashboard">
+            <h2>Статистика игрового времени</h2>
+
+            <div class="dashboard-grid">
+                <article class="dashboard-block">
+                    <span class="dashboard-icon">⏱️</span>
+                    <h3>Часы в RPG</h3>
+                    <p>247 часов</p>
+                </article>
+
+                <article class="dashboard-block">
+                    <span class="dashboard-icon">🏆</span>
+                    <h3>Победы в шутерах</h3>
+                    <p>156 побед</p>
+                </article>
+
+                <article class="dashboard-block">
+                    <span class="dashboard-icon">📜</span>
+                    <h3>Пройденные квесты</h3>
+                    <p>328 квестов</p>
+                </article>
+            </div>
+        </section>
+
+        <aside id="technologies">
+            <h2>Любимые технологии</h2>
+            <p>Мои любимые игровые платформы — ПК и консоль.</p>
+            <p>
+                Интересуюсь разработкой игр, игровыми движками
+                и современными технологиями.
+            </p>
+            <a href="https://www.unrealengine.com/">
+                Unreal Engine
+            </a>
+        </aside>
+
+        <section id="feedback">
+            <h2>Форма обратной связи</h2>
+
+            <form id="feedback-form">
+                <label for="name">Имя:</label>
+                <input id="name"
+                       name="name"
+                       type="text"
+                       placeholder="Введите ваше имя">
+
+                <label for="email">Email:</label>
+                <input id="email"
+                       name="email"
+                       type="email"
+                       placeholder="Введите ваш Email">
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message"
+                          name="message"
+                          placeholder="Введите сообщение"></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Алексей Минчаков</p>
+    </footer>
+</body>
+</html>
